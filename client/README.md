@@ -1,16 +1,93 @@
-# React + Vite
+# AI Resume Analyzer - Client
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Frontend for an AI-powered Resume Analyzer and Builder web application.
 
-Currently, two official plugins are available:
+## Preview
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+A modern responsive UI that helps users:
+- Create resumes
+- Upload resumes
+- Analyze resumes using AI
+- Improve ATS compatibility
 
-## React Compiler
+## Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- Responsive modern landing page
+- Authentication UI
+- Resume upload interface
+- AI-powered resume analysis (Work in Progress)
+- Clean and modern UI
+- Fast development setup using Vite
 
-## Expanding the ESLint configuration
+## Tech Stack
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- React
+- Vite
+- Tailwind CSS
+- DaisyUI
+- React Router
+- Axios
+
+## Folder Structure
+
+```bash
+client/
+├── src/
+├── public/
+├── package.json
+└── vite.config.js
+```
+
+## Installation
+
+Clone the repository:
+
+```bash
+git clone YOUR_GITHUB_REPO_LINK
+```
+
+Move to client folder:
+
+```bash
+cd client
+```
+
+Install dependencies:
+
+```bash
+npm install
+```
+
+Run the development server:
+
+```bash
+npm run dev
+```
+
+## Environment Variables
+
+Create a `.env` file in the client directory.
+
+Example:
+
+```env
+VITE_API_URL=your_backend_url
+```
+
+## Upcoming Features
+
+- Resume ATS score checker
+- AI suggestions for improvement
+- Resume keyword optimization
+- PDF export
+- User dashboard
+- Resume templates
+- Authentication system
+
+## Status
+
+🚧 Currently under development.
+
+## Author
+
+Aditya Paul
