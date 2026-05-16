@@ -4,6 +4,7 @@ import { ArrowLeftIcon, Briefcase, ChevronLeft, ChevronRight, FileText, FolderIc
 import Personalinfo from '../components/Personalinfo'
 import { dummyResumeData } from '../assets/assets'
 import ResumePreview from '../components/ResumePreview'
+import TemplateSelector from '../components/TemplateSelector'
 
 const Resumebuilder = () => {
 
@@ -70,7 +71,9 @@ const Resumebuilder = () => {
 
               {/* Section Navigation */}
               <div className='flex justify-between items-center mb-6 border-b border-gray-300 py-1'>
-                <div></div>
+                <div className='flex items-center gap-2'>
+                  <TemplateSelector selectedTemplate={resumeData.templates} onChange={(template) => setResumeData(prev => ({ ...prev, templates: template }))} />
+                </div>
                 <div className='flex items-center'>
                   {activeSectionIndex !== 0 && (
                     <button
@@ -111,7 +114,7 @@ const Resumebuilder = () => {
             <div>
               {/*buttons*/}
             </div>
-            <ResumePreview data={resumeData} template={resumeData.templates} accentColor={resumeData.accent_color} />
+            <ResumePreview data={resumeData} template={resumeData.templates} accentColor={resumeData.accent_color}  />
           </div>
 
         </div>
