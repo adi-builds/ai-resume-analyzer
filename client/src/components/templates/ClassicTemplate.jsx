@@ -1,4 +1,4 @@
-import { Mail, Phone, MapPin, Linkedin, Globe } from "lucide-react";
+import { Mail, Phone, MapPin, Link2, Globe } from "lucide-react";
 
 const ClassicTemplate = ({ data, accentColor }) => {
     const formatDate = (dateStr) => {
@@ -37,10 +37,10 @@ const ClassicTemplate = ({ data, accentColor }) => {
                             <span>{data.personal_info.location}</span>
                         </div>
                     )}
-                    {data.personal_info?.linkedin && (
+                    {data.personal_info?.Link2 && (
                         <div className="flex items-center gap-1">
-                            <Linkedin className="size-4" />
-                            <span className="break-all">{data.personal_info.linkedin}</span>
+                            <Link2 className="size-4" />
+                            <span className="break-all">{data.personal_info.Link2}</span>
                         </div>
                     )}
                     {data.personal_info?.website && (
