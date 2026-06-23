@@ -17,9 +17,9 @@ app.use(cors())
 app.get('/', (req, res) => {
     res.send('API is running...')
 })
-app.use('/api/users',userRouter)
-app.use('/api/users',resumeRouter)
-app.use('/api/ai',aiRouter)
+app.use('/api/users', userRouter)
+app.use('/api/resumes', resumeRouter)   // ✅ was '/api/users'
+app.use('/api/ai', aiRouter)
 
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`))
 

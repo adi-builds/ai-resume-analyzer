@@ -19,11 +19,6 @@ const TemplateSelector = ({selectedTemplate,onChange}) => {
             name : "Minimal",
             preview:"A clean, simple resume format with a focus on content and readability",
         },
-        {
-            id:"minimal-image", 
-            name : "Minimal with Image",
-            preview:"A clean, simple resume format with a focus on content and readability, including a space for an image or avatar",
-        },
     ]
   return (
     <div className='relative'>

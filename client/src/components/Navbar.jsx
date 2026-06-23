@@ -1,11 +1,17 @@
 import React from 'react'
+import { useDispatch, useSelector } from 'react-redux'
 import { Link, useNavigate } from 'react-router-dom'
+import { logout } from '../app/features/authSlice'
 
 const Navbar = () => {
-    const user ={name: "John Doe"}
+    const {user} = useSelector(state => state.auth)
+
+    const dispatch = useDispatch()
+
     const navigate = useNavigate()
     const logoutUser = () => {
         navigate('/')
+        dispatch(logout())
     }
   return (
     <div className='shadow bg-white'>
@@ -16,12 +22,12 @@ const Navbar = () => {
   <rect x="58" y="40" width="34" height="6" rx="3" fill="white"/>
   <rect x="58" y="54" width="34" height="6" rx="3" fill="white"/>
   <rect x="58" y="68" width="22" height="6" rx="3" fill="white"/>
-  <text x="126" y="75" font-family="Arial, sans-serif" font-weight="700" font-size="38" fill="#16a34a">Resume</text>
-  <text x="376" y="75" font-family="Arial, sans-serif" font-weight="700" font-size="38" fill="#111827">AI</text>
+<text x="126" y="75" fontFamily="Arial, sans-serif" fontWeight="700" fontSize="38" fill="#16a34a">Resume</text>
+<text x="376" y="75" fontFamily="Arial, sans-serif" fontWeight="700" fontSize="38" fill="#111827">AI</text>
 </svg>
             </Link>
             <div className='flex items-center gap-4 text-sm'>
-                <p className='max-sm:hidden'>Hi, {user.name}</p>
+                <p className='max-sm:hidden'>Hi, {user?.name}</p>
                 <button onClick={logoutUser} className='bg-white hover:bg-slate-50 border border-gray-300 px-7 py-1.5 rounded-full active:scale-95 transition-all'>Logout</button>
             </div>
         </nav>
